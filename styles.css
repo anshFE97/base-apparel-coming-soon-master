@@ -1,0 +1,235 @@
+:root {
+   /* ### Primary*/
+
+--Desaturated-Red: hsl(0, 36%, 70%);
+--Soft-Red: hsl(0, 93%, 68%);
+
+/*### Neutral*/
+
+--Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+/*### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient( 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.main{
+    padding-top: 2rem;
+
+}
+
+.main .logo {
+    max-width: 100%;
+    width: 30%;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.main .above img {
+    width: 100%;
+
+}
+
+/*text section*/
+
+.main .below {
+
+    padding-inline: 2rem;
+}
+.main .below h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-inline: 45px;
+    letter-spacing: 6px;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+
+.main .below h1 span {
+    color: var(--Desaturated-Red);
+    font-weight: lighter;
+    display: block;
+    letter-spacing: 8px;
+}
+
+.main .below p {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--Desaturated-Red);
+    font-weight: 600;
+    margin-inline: 15px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.main .below .btn {
+    text-align: center;
+    position: relative;
+    width: 20rem;
+    padding-bottom: 2rem;
+}
+
+.main .below .btn .mail{
+ height: 40px;
+ min-width: 280px;
+ border-radius: 30px;
+ border: 1px solid var(--Dark-Grayish-Red);
+ background-image: linear-gradient( 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.main .below .btn .mail::placeholder {
+    color: var(--Dark-Grayish-Red);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.main .below .btn .error {
+    display: none;
+    position: absolute;
+    right: 5rem;
+    top: 0.5rem;
+}
+
+.active {
+    display: inline !important;
+}
+
+.border {
+    border: 2px solid red !important;
+}
+
+.main .below .btn .text-add {
+    display: none;
+    color: var(--Soft-Red);
+    font-weight: 600;
+    margin-left: 1.5rem;
+    font-size: 0.8rem;
+}
+
+
+.main .below .btn .submit {
+    position: absolute;
+    height: 41px;
+    width: 55px;
+    border-radius: 30px;
+    right: 2px;
+    border: none;
+    background-image: linear-gradient( 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+}
+
+.main .below .btn .submit:active {
+    width: 60px;
+    transform: translateX(2px);
+    transform: translateY(-2px);
+}
+
+.main .below .btn .submit:hover{
+    background-image: linear-gradient( 135deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+}
+
+
+    .attribution { 
+        margin-top: 1rem;
+        font-size: 11px; text-align: center; 
+    }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+
+    @media (min-width: 500px) {
+
+        .main{
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 10% 90%;
+            background: url("./images/bg-pattern-desktop.svg"), no-repeat, left;
+            background-size: 60%;
+        
+        }
+
+        .main .logo {
+            max-width: 100%;
+            width: 30%;
+            margin: 4rem 0 0 8rem;
+        }
+        
+        .main .above {
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        
+        }
+
+        .main .above img {
+            height: clac(100vh - 1px);
+        }
+
+
+        /*main work*/
+
+        .main .below {
+            margin-left: 8rem;
+
+            padding-inline: 0;
+        }
+        .main .below h1 {
+            text-align: left;
+            font-size: 4rem;
+            letter-spacing: 15px;
+            margin: 0 25rem 1rem 0;
+            font-weight: 600;
+            color: var(--Dark-Grayish-Red);
+        }
+        
+        .main .below p {
+            text-align: left;
+            font-size: 0.9rem;
+            word-spacing: 4px;
+            margin: 0 20rem 2rem 0;
+            line-height: 2;
+        }
+        
+        .main .below .btn {
+            text-align: left;
+            width: 26rem;
+        }
+        
+        .main .below .btn .mail{
+         height: 40px;
+         width: 25rem;
+  }
+
+
+  .main .below .btn .submit {
+    width: 70px;
+  }
+
+
+  .main .below .btn .submit:active {
+    width: 80px;
+  }
+        
+    }
